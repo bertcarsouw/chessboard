@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Chessboard</title>
+        <link rel="stylesheet" href="./style.css">
+    </head>
+    <body>
+
+        <div id="board"></div>
+
+        <script type="module">
+            import Board from './scripts/board.js';
+            import Pieces from './scripts/pieces.js';
+
+            Board.setup('board');
+            Pieces.setupNewGame('board');
+
+            setTimeout(() => Pieces.move('d2', 'd4'), 1000);
+            setTimeout(() => Pieces.move('e7', 'e5'), 2000);
+            setTimeout(() => Pieces.move('d4', 'e5'), 3000);
+        </script>
+    </body>
+</html>

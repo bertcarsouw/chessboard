@@ -1,0 +1,48 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+#board {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 6px;
+    overflow: hidden;
+    margin: 30px auto 0 auto;
+}
+
+.field {
+    width: calc(100% / 8);
+    height: calc(100% / 8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.field--white {
+    background: #ebecd0;
+}
+
+.field--black {
+    background: #779556;
+}
+
+.piece {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.piece--animate {
+    transition: 150ms ease-in-out;
+}
+
+.piece img {
+    width: 100%;
+}
